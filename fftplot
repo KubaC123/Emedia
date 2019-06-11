@@ -1,0 +1,14 @@
+clear
+
+reset
+set key off
+set border 3
+set xrange [-2000:2000]
+set xtic 500 nomirror
+set yrange [-2000:2000]
+set ytic 500 nomirror
+set title "Frequency spectrum for 1000 samples of wav file"
+set xlabel "Frequency"
+set ylabel "Power"
+plot "fftdata.txt" using 1:2 with impulses lt 1
+pause -1
